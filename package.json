@@ -1,0 +1,24 @@
+{
+  "name": "Strijp-CS",
+  "description": "The best project ever.",
+  "version": "0.1.0",
+  "homepage": "http://strijpcs.nl",
+  "author": {
+    "name": "Ben van de Sande | Pomodoro",
+    "email": "ben@pomodoro.nl",
+    "url": "http://pomodoro.nl"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/benvds/Strijp-CS.git"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://strijpcs.nl/blob/master/LICENSE-MIT"
+    }
+  ],
+  "dependencies": {
+    "node-build-script": "http://github.com/h5bp/node-build-script/tarball/master"
+  }
+}

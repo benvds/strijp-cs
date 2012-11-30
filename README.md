@@ -10,6 +10,7 @@
 ### Developing locally
 
     git clone git://github.com/benvds/strijp-cs.git
+    cd strijp-cs
     h5bp server
 
 ### Building

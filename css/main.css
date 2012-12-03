@@ -178,38 +178,19 @@ body, a {
 
 
 
-#bg, article {
-    -webkit-animation-duration: 4s;
-    -webkit-animation-delay: 2s;
-    -webkit-animation-timing-function: ease-out;
-    -webkit-animation-fill-mode: forwards;
+article, #bg {
+    -webkit-transition: all 2s ease-out 3s;
+    /* prevent flickering: */
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
 }
-#bg {
-    -webkit-animation-name: blur;
-}
-article {
-    -webkit-animation-name: focus;
+article, body.window-loaded #bg {
     -webkit-filter: blur(6px);
 }
-
-@-webkit-keyframes blur {
-  from {
-      -webkit-filter: blur(0);
-  }
-
-  to {
-      -webkit-filter: blur(6px);
-  }
+body.window-loaded article, #bg {
+    -webkit-filter: blur(0);
 }
-@-webkit-keyframes focus {
-  from {
-      -webkit-filter: blur(6px);
-  }
 
-  to {
-      -webkit-filter: blur(0);
-  }
-}
 
 /* ==============
     MOBILE: Menu

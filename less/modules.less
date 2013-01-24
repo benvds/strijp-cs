@@ -1,8 +1,13 @@
 /* ======== MODULES ======== */
 
+@import 'mixins';
+
 /* ---- site header ---- */
 
 #site-header {
+    position: fixed;
+    width: 100%;
+    z-index: 1;
     padding-right: 2em;
     background-color: black;
     border-bottom: 1px solid gray;
@@ -10,7 +15,6 @@
 
 #logo {
     position: absolute;
-    z-index: 1;
     top: 20px;
     left: 20px;
 }
@@ -90,6 +94,61 @@ article.slideshow {
 }
 
 /* ---- gallery (projects) ---- */
+
+ul.gallery {
+    position: absolute;
+    width: 100%;
+    left: 0;
+    top: 14em;
+    padding-left: 20px;
+    margin: 0;
+    padding: 0 0 0 20px;
+    list-style: none;
+
+    > li {
+        float: left;
+        padding-right: 60px;
+        background: transparent url('../img/gallery-arrow.png') right center no-repeat;
+        background-size: 60px 50px;
+
+        &:last-child {
+            background: none;
+        }
+    }
+}
+
+aside.gallery {
+    position: fixed;
+    right: 3em;
+    top: 4em;
+    width: 32em;
+    padding: .5em 1.5em;
+    background-color: hsl(0, 0%, 20%);
+    .border-radius;
+}
+
+.gallery-group {
+    width: 30em;
+    padding: 0;
+    list-style: none;
+
+    li {
+        float: left;
+        width: 8em;
+        height: 8em;
+        margin: .9375em;
+        padding: 1.5em;
+        border: .0625em solid white;
+        .border-radius;
+
+        &.w2 {
+            width: 17.88em;
+        }
+        &.h2 {
+            height: 17.88em;
+        }
+    }
+}
 
 /* ---- carousel (team) ---- */
 

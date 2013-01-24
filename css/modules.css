@@ -1,13 +1,21 @@
 /* ======== MODULES ======== */
+/* ======== MIXINS ======== */
+.border-radius {
+  -webkit-border-radius: 1.5em 0 1.5em 1.5em;
+  -moz-border-radius: 1.5em 0 1.5em 1.5em;
+  border-radius: 1.5em 0 1.5em 1.5em;
+}
 /* ---- site header ---- */
 #site-header {
+  position: fixed;
+  width: 100%;
+  z-index: 1;
   padding-right: 2em;
   background-color: black;
   border-bottom: 1px solid gray;
 }
 #logo {
   position: absolute;
-  z-index: 1;
   top: 20px;
   left: 20px;
 }
@@ -77,6 +85,58 @@ article.slideshow .entry-content {
   opacity: 1 !important;
 }
 /* ---- gallery (projects) ---- */
+ul.gallery {
+  position: absolute;
+  width: 100%;
+  left: 0;
+  top: 14em;
+  padding-left: 20px;
+  margin: 0;
+  padding: 0 0 0 20px;
+  list-style: none;
+}
+ul.gallery > li {
+  float: left;
+  padding-right: 60px;
+  background: transparent url('../img/gallery-arrow.png') right center no-repeat;
+  background-size: 60px 50px;
+}
+ul.gallery > li:last-child {
+  background: none;
+}
+aside.gallery {
+  position: fixed;
+  right: 3em;
+  top: 4em;
+  width: 32em;
+  padding: .5em 1.5em;
+  background-color: #333333;
+  -webkit-border-radius: 1.5em 0 1.5em 1.5em;
+  -moz-border-radius: 1.5em 0 1.5em 1.5em;
+  border-radius: 1.5em 0 1.5em 1.5em;
+}
+.gallery-group {
+  width: 30em;
+  padding: 0;
+  list-style: none;
+}
+.gallery-group li {
+  float: left;
+  width: 8em;
+  height: 8em;
+  margin: .9375em;
+  padding: 1.5em;
+  border: .0625em solid white;
+  -webkit-border-radius: 1.5em 0 1.5em 1.5em;
+  -moz-border-radius: 1.5em 0 1.5em 1.5em;
+  border-radius: 1.5em 0 1.5em 1.5em;
+}
+.gallery-group li.w2 {
+  width: 17.88em;
+}
+.gallery-group li.h2 {
+  height: 17.88em;
+}
 /* ---- carousel (team) ---- */
 /* ---- overview (workplaces) ---- */
 /* ---- archive (blog) ---- */

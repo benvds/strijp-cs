@@ -52,6 +52,6 @@
 		</svg>
 	</div>
 
-	<%- @getBlock("scripts").add(["/js/all.min.js"]).toHTML() %>
+	<%- @getBlock("scripts").add(["/js/vendor/jquery.js", "/js/vendor/holder.js", "/js/plugins.js", "/js/main.js"]).toHTML() %>
 </body>
 </html>

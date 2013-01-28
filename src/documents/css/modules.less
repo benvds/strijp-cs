@@ -23,7 +23,7 @@
     float: right;
 
     li, a {
-        display: inline-block;     
+        display: inline-block;
     }
     a {
         padding: .5em 1em;
@@ -95,7 +95,7 @@ article.slideshow {
 
 /* ---- gallery (projects) ---- */
 
-ul.gallery {
+.gallery-overview {
     position: absolute;
     width: 100%;
     left: 0;
@@ -117,7 +117,7 @@ ul.gallery {
     }
 }
 
-aside.gallery {
+.gallery-details {
     position: fixed;
     right: 3em;
     top: 4em;
@@ -134,10 +134,11 @@ aside.gallery {
 
     li {
         float: left;
+        position: relative;
         width: 8em;
         height: 8em;
         margin: .9375em;
-        padding: 1.5em;
+        overflow: hidden;
         border: .0625em solid white;
         .border-radius;
 
@@ -147,6 +148,14 @@ aside.gallery {
         &.h2 {
             height: 17.88em;
         }
+    }
+
+    // img.bg, .content {
+    //     position: absolute;
+    // }
+
+    .content {
+        padding: 1.5em;
     }
 }
 

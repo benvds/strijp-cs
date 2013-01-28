@@ -3,6 +3,7 @@
     "js": {
       "src": [
         "out/js/vendor/jquery.js",
+        "out/js/vendor/holder.js",
         "out/js/plugins.js",
         "out/js/main.js"
       ],

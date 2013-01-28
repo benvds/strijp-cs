@@ -4,8 +4,8 @@
 		$('ul.gallery').each(function() {
 			var $this = $(this),
 				$lis = $this.children('li'),
-				paddingLeft = parseInt($this.css('paddingLeft')),
-				paddingRight = parseInt($this.css('paddingRight')),
+				paddingLeft = parseInt($this.css('paddingLeft'), 10),
+				paddingRight = parseInt($this.css('paddingRight'), 10),
 				totalWidth = 0;
 
 			console.log('li', $this);
@@ -15,7 +15,7 @@
 			});
 
 			$this.width(totalWidth + paddingLeft + paddingRight);
-	    });
+		});
 	}
 
 	function loadAssets() {
@@ -41,7 +41,7 @@
 
     // window load
     $(window).on('load', function () {
-            $('body').addClass('window-loaded');
+        $('body').addClass('window-loaded');
     });
 
 })(jQuery);

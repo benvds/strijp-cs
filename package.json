@@ -23,10 +23,20 @@
     "npm": "1.1.x"
   },
   "dependencies": {
-    "docpad": "~6.x",
-    "docpad-plugin-marked": "2.x",
+    "docpad": "6.x",
+    "docpad-plugin-coffeescript": "2.x",
     "docpad-plugin-eco": "2.x",
-    "docpad-plugin-less": "~2.x"
+    "docpad-plugin-marked": "2.x",
+    "docpad-plugin-partials": "2.x",
+    "docpad-plugin-less": "2.x",
+    "docpad-plugin-text": "2.x",
+    "grunt": "~0.3.17",
+    "grunt-css": "~0.3.2",
+    "bal-util": "~1.15.3",
+    "underscore": "~1.4.3"
+  },
+  "devDependencies": {
+    "docpad-plugin-livereload": "2.x"
   },
   "main": "node_modules/docpad/bin/docpad-server",
   "scripts": {

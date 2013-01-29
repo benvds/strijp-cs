@@ -1,31 +1,26 @@
 // Gallery
 (function ($) {
-    'use strics';
+    'use strict';
 
     var Gallery = function(element) {
         this.$element = $(element);
-        this.initOverview();
+        this.$galleryDetails = $('.gallery-details:first');
+        this.init();
     };
     Gallery.prototype = {
-        initOverview: function() {
-            this.$element.find('.gallery-overview').each(function() {
-                var $this = $(this),
-                $lis = $this.children('li'),
-                    paddingLeft = parseInt($this.css('paddingLeft'), 10),
-                    paddingRight = parseInt($this.css('paddingRight'), 10),
-                    totalWidth = 0;
+        init: function() {
+            var that = this,
+                content;
 
-                $lis.each(function() {
-                    totalWidth += $(this).outerWidth();
-                });
+            that.$element.find('.gallery-group > li').on('click', function() {
+                content = $(this).find('.entry-content');
 
-                $lis.has('.entry-content').each(function() {
-                    $(this).on('click', function() {
-                        console.log('clickerdeclick');
-                    });
-                });
-
-                $this.width(totalWidth + paddingLeft + paddingRight);
+                if (content.length) {
+                    that.$galleryDetails.empty().append(content.html());
+                    that.$galleryDetails.addClass('active');
+                } else {
+                    that.$galleryDetails.removeClass('active');
+                }
             });
         }
     };

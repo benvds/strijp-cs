@@ -98,33 +98,32 @@ article.slideshow {
 .gallery-overview {
     position: absolute;
     width: 100%;
-    left: 0;
     top: 14em;
-    padding-left: 20px;
-    margin: 0;
-    padding: 0 0 0 20px;
-    list-style: none;
 
-    > li {
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    li {
         float: left;
-        padding-right: 60px;
-        background: transparent url('../img/gallery-arrow.png') right center no-repeat;
-        background-size: 60px 50px;
-
-        &:last-child {
-            background: none;
-        }
     }
 }
 
 .gallery-details {
     position: fixed;
-    right: 3em;
+    right: -40em;
     top: 4em;
     width: 32em;
     padding: .5em 1.5em;
     background-color: hsl(0, 0%, 20%);
     .border-radius;
+    -webkit-transition: all .5s cubic-bezier(.05,.75,.25,.95) 0s;
+
+    &.active {
+        right: 3em;
+    }
 }
 
 .gallery-group {

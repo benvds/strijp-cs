@@ -2,6 +2,8 @@
 
 @import 'mixins';
 
+@highlight: #feb92f;
+
 /* ---- site header ---- */
 
 #site-header {
@@ -119,7 +121,7 @@ article.slideshow {
     padding: .5em 1.5em;
     background-color: hsl(0, 0%, 20%);
     .border-radius;
-    -webkit-transition: all .5s cubic-bezier(.05,.75,.25,.95) 0s;
+    -webkit-transition: all .25s cubic-bezier(.05,.75,.25,.95) 0s;
 
     &.active {
         right: 3em;
@@ -158,10 +160,84 @@ article.slideshow {
     }
 }
 
+.gallery .slider-group {
+    padding-right: 2 * .9375em;
+//     &:last-child {
+//         padding-right: 0;
+//     }
+}
+
 /* ---- carousel (team) ---- */
 
 /* ---- overview (workplaces) ---- */
 
+.overview-header {
+    position: fixed;
+    right: 3em;
+    top: 4em;
+    width: 32em;
+    padding: .5em 1.5em;
+    background-color: hsl(0, 0%, 20%);
+    .border-radius;
+    -webkit-transition: all .25s cubic-bezier(.05,.75,.25,.95) 0s;
+}
+
+.overview {
+
+    @sectionWidth: 20em;
+
+    section {
+        position: relative;
+        float: left;
+        width: @sectionWidth;
+        height: @sectionWidth;
+        overflow: hidden;
+        margin-right: 2em;
+        border: 1px solid white;
+        .border-radius;
+    }
+
+    .slider {
+        position: absolute;
+        width: 100%;
+        top: 18em;
+    }
+
+    .bg {
+        position: absolute;
+        top: 0;
+        z-index: 1;
+        max-width: none;
+        width: 133.33%;
+        height: 100%;
+    }
+    .entry-content {
+        position: relative;
+        height: 100%;
+        z-index: 2;
+    }
+
+    h2 {
+        position: absolute;
+        top: 0;
+        width: 90%;
+        margin: 5%;
+        padding: .25em .5em;
+        .border-radius;
+        background-color: black;
+        color: @highlight;
+    }
+
+    .description {
+        position: absolute;
+        margin: 0;
+        padding: .5em 1em;
+        bottom: 0;
+        background-color: black;
+        background-color: hsla(0, 0%, 0%, .5);
+        color: white;
+    }
+}
 /* ---- archive (blog) ---- */
 
 /* ---- post (blog) ---- */

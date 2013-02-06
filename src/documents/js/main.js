@@ -10,9 +10,10 @@
     Gallery.prototype = {
         init: function() {
             var that = this,
+                $lis = that.$element.find('.gallery-group > li'),
                 content;
 
-            that.$element.find('.gallery-group > li').on('click', function() {
+            $lis.on('click', function() {
                 content = $(this).find('.entry-content');
 
                 if (content.length) {
@@ -22,6 +23,8 @@
                     that.$galleryDetails.removeClass('active');
                 }
             });
+
+            $lis.has('.entry-content').addClass('clickable');
         }
     };
 

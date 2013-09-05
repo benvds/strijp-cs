@@ -101,76 +101,29 @@ article.slideshow {
     }
 }
 
-/* ---- gallery (projects) ---- */
+/* ---- showcase (projects) ---- */
 
-.gallery-overview {
-    position: absolute;
-    width: 100%;
-    top: 14em;
-
-    ul {
-        margin: 0;
-        padding: 0;
-        list-style: none;
+.showcase {
+    .item-primary {
+        width: 500px;
     }
-
-    li {
-        float: left;
+    .item-secondary {
+        width: 250px;
     }
 }
 
-.gallery-details {
-    position: fixed;
-    right: -40em;
-    top: 4em;
-    width: 32em;
-    padding: .5em 1.5em;
-    background-color: hsl(0, 0%, 20%);
-    .border-radius;
-    -webkit-transition: all .25s cubic-bezier(.05,.75,.25,.95) 0s;
-
-    &.active {
-        right: 3em;
-    }
+.text-block {
+    padding: 20px;
+    font-size: 150%;
 }
-
-.gallery-group {
-    width: 30em;
-    padding: 0;
-    list-style: none;
-
-    li {
-        float: left;
-        position: relative;
-        width: 8em;
-        height: 8em;
-        margin: .9375em;
-        overflow: hidden;
-        border: .0625em solid white;
-        .border-radius;
-
-        &.w2 {
-            width: 17.88em;
-        }
-        &.h2 {
-            height: 17.88em;
-        }
-    }
-
-    // img.bg, .content {
-    //     position: absolute;
-    // }
-
-    .content {
-        padding: 1.5em;
-    }
+.text-block-1 {
+    background-color: #e2c9b6;
 }
-
-.gallery .slider-group {
-    padding-right: 2 * .9375em;
-//     &:last-child {
-//         padding-right: 0;
-//     }
+.text-block-2 {
+    background-color: #787c7e;
+}
+.text-block-3 {
+    background-color: #9c7b59;
 }
 
 /* ---- carousel (team) ---- */

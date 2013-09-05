@@ -1,41 +1,41 @@
 // Gallery
-(function ($) {
-    'use strict';
+// (function ($) {
+//     'use strict';
 
-    var Gallery = function(element) {
-        this.$element = $(element);
-        this.$galleryDetails = $('.gallery-details:first');
-        this.init();
-    };
-    Gallery.prototype = {
-        init: function() {
-            var that = this,
-                $lis = that.$element.find('.gallery-group > li'),
-                content;
+//     var Gallery = function(element) {
+//         this.$element = $(element);
+//         this.$galleryDetails = $('.gallery-details:first');
+//         this.init();
+//     };
+//     Gallery.prototype = {
+//         init: function() {
+//             var that = this,
+//                 $lis = that.$element.find('.gallery-group > li'),
+//                 content;
 
-            $lis.on('click', function() {
-                content = $(this).find('.entry-content');
+//             $lis.on('click', function() {
+//                 content = $(this).find('.entry-content');
 
-                if (content.length) {
-                    that.$galleryDetails.empty().append(content.html());
-                    that.$galleryDetails.addClass('active');
-                } else {
-                    that.$galleryDetails.removeClass('active');
-                }
-            });
+//                 if (content.length) {
+//                     that.$galleryDetails.empty().append(content.html());
+//                     that.$galleryDetails.addClass('active');
+//                 } else {
+//                     that.$galleryDetails.removeClass('active');
+//                 }
+//             });
 
-            $lis.has('.entry-content').addClass('clickable');
-        }
-    };
+//             $lis.has('.entry-content').addClass('clickable');
+//         }
+//     };
 
-    // document load
-    $(function() {
-        $('.gallery').each(function() {
-            new Gallery(this);
-        });
-    });
+//     // document load
+//     $(function() {
+//         $('.gallery').each(function() {
+//             new Gallery(this);
+//         });
+//     });
 
-})(jQuery);
+// })(jQuery);
 
 (function ($) {
 
@@ -62,6 +62,12 @@
     // window load
     $(window).on('load', function () {
         $('body').addClass('window-loaded');
+
+        $('.showcase section').masonry({
+            itemSelector: '.item',
+            columnWidth: 250,
+            gutter: 0
+        });
     });
 
 })(jQuery);

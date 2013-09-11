@@ -54,6 +54,19 @@
         });
     }
 
+    function playSlideshow() {
+        var $slideshow = $('.fs-slideshow:first'),
+            slideshowInterval = 10 * 1000;
+
+        if (!$slideshow.length) { return false; }
+
+        window.setTimeout(function() {
+            window.setInterval(function() {
+                $slideshow.data('fsSlideshow').showNext();
+            }, slideshowInterval);
+        }, slideshowInterval);
+    }
+
     // document load
     $(function () {
         loadAssets();
@@ -68,6 +81,8 @@
             columnWidth: 326,
             gutter: 0
         });
+
+        playSlideshow();
     });
 
 })(jQuery);

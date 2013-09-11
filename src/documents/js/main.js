@@ -65,7 +65,7 @@
 
         $('.showcase section').masonry({
             itemSelector: '.item',
-            columnWidth: 250,
+            columnWidth: 326,
             gutter: 0
         });
     });

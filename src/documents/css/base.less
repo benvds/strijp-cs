@@ -1,5 +1,28 @@
 /* ======== BASE ======== */
 
+@font-face {
+    font-family: 'Aller';
+    src: url('/fonts/aller_bd-webfont.eot');
+    src: url('/fonts/aller_bd-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/aller_bd-webfont.woff') format('woff'),
+         url('/fonts/aller_bd-webfont.ttf') format('truetype'),
+         url('/fonts/aller_bd-webfont.svg#allerbold') format('svg');
+    font-weight: bold;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'Aller';
+    src: url('/fonts/aller_rg-webfont.eot');
+    src: url('/fonts/aller_rg-webfont.eot?#iefix') format('embedded-opentype'),
+         url('/fonts/aller_rg-webfont.woff') format('woff'),
+         url('/fonts/aller_rg-webfont.ttf') format('truetype'),
+         url('/fonts/aller_rg-webfont.svg#allerregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
 *, *:before, *:after {
 	-webkit-box-sizing: border-box;
 	-moz-box-sizing: border-box;
@@ -19,6 +42,7 @@ html {
 }
 
 body {
+    font-family: 'Aller', sans-serif;
     font-size: 1em;
     line-height: 1.4;
 }
@@ -32,9 +56,22 @@ p,
 a {
     color: hsl(0, 0%, 70%);
 }
+a {
+    color: #faba24;
+}
 
+h1, h2, h3 {
+    font-weight: normal;
+    color: #fff;
+}
 h1 {
-    font-size: 1.5em;
+    font-size: 2em;
+}
+h2 {
+    font-size: 1.3em;
+}
+h3 {
+    font-size: 1.1em;
 }
 
 img {

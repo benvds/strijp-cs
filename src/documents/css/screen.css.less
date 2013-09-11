@@ -20,6 +20,7 @@
     Author: Ben van de Sande - http://pomodoro.nl
    ========================================================================== */
 
+@import 'fs-slideshow';
 @import 'base';
 @import 'layout';
 @import 'modules';
@@ -31,24 +32,24 @@
 /* ======== PAGES ======== */
 
 .home {
-    article,
-    #bg {
-        background-image: url('/img/backgrounds/coding.jpg');
+    .fs-slideshow,
+    .fs-background {
+        // background-image: url('/img/backgrounds/coding.jpg');
         -webkit-transition: all 2s ease-out 3s;
         /* prevent flickering: */
         -webkit-perspective: 1000;
         -webkit-backface-visibility: hidden;
     }
 
-    article,
-    &.window-loaded #bg {
+    .fs-slideshow,
+    &.window-loaded .fs-background {
         -webkit-filter: blur(6px);
         -moz-filter: blur(6px);
         filter: blur(6px);
     }
 
-    &.window-loaded article,
-    #bg {
+    &.window-loaded .fs-slideshow,
+    .fs-background {
         -webkit-filter: blur(0);
         -moz-filter: blur(0);
         filter: blur(0);

@@ -1,0 +1,53 @@
+html, body, .fs-background, .fs-slide {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+.fs-slideshow {
+    list-style: none;
+}
+    /* OPTIONAL use class for slide in slideshow for better performance */
+    .fs-bg, .fs-slideshow > li {
+        display: none;
+    }
+    .fs-slideshow .fs-active {
+        display: block;
+    }
+
+.fs-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+}
+
+.fs-slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-size: cover;
+    -webkit-transition: all 2s ease-out;
+    -webkit-perspective: 1000;
+    -webkit-backface-visibility: hidden;
+    transition: all 2s ease-out;
+    opacity: 0;
+}
+    .fs-slide.fs-active {
+        opacity: 1;
+    }
+
+.fs-prev, .fs-next {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    top: 50%;
+}
+.fs-prev {
+    left: 20px;
+}
+.fs-next {
+    right: 20px;
+}
+

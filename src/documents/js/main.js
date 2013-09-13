@@ -82,6 +82,14 @@
             gutter: 0
         });
 
+        $('.gallery section').masonry({
+            itemSelector: '.item',
+            columnWidth: 320,
+            gutter: 10
+        });
+        
+        $('.fancybox').fancybox();
+
         playSlideshow();
     });
 

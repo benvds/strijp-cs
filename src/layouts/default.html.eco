@@ -9,7 +9,7 @@
 	<title><%= @document.title %> | Strijp-CS</title>
 	<!-- <meta name="viewport" content="width=device-width"> -->
 	<%- @getBlock("meta").toHTML() %>
-    <%- @getBlock("styles").add(["/css/screen.css"]).toHTML() %>
+    <%- @getBlock("styles").add(["/css/vendor/jquery.fancybox.css", "/css/screen.css"]).toHTML() %>
 	<%- @getBlock("scripts").add(["/js/vendor/modernizr-2.6.2.min.js"]).toHTML() %>
 </head>
 	<body class="<%= @document.bodyClass %>">
@@ -52,6 +52,6 @@
 		</svg>
 	</div>
 
-	<%- @getBlock("scripts").add(["/js/vendor/jquery.js", "/js/vendor/lodash.js", "/js/vendor/holder.js", "/js/vendor/masonry.pkgd.js", "/js/vendor/fs-slideshow.js", "/js/plugins.js", "/js/main.js"]).toHTML() %>
+	<%- @getBlock("scripts").add(["/js/vendor/jquery.js", "/js/vendor/lodash.js", "/js/vendor/holder.js", "/js/vendor/masonry.pkgd.js", "/js/vendor/fs-slideshow.js", "/js/vendor/jquery.fancybox.pack.js", "/js/plugins.js", "/js/main.js"]).toHTML() %>
 </body>
 </html>

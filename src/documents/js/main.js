@@ -76,6 +76,8 @@
     $(window).on('load', function () {
         $('body').addClass('window-loaded');
 
+        $('.gallery section > .item').shuffle();
+
         $('.showcase section').masonry({
             itemSelector: '.item',
             columnWidth: 326,

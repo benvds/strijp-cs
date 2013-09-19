@@ -52,6 +52,7 @@
 		</svg>
 	</div>
 
+    <script src="http://maps.google.com/maps/api/js?sensor=false"></script>
 	<%- @getBlock("scripts").add(["/js/vendor/jquery.js", "/js/vendor/lodash.js", "/js/vendor/holder.js", "/js/vendor/masonry.pkgd.js", "/js/vendor/fs-slideshow.js", "/js/vendor/jquery.fancybox.pack.js", "/js/plugins.js", "/js/main.js"]).toHTML() %>
 </body>
 </html>

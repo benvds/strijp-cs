@@ -124,6 +124,8 @@
 
     // document load
     $(function () {
+        $('.gallery section > .item').shuffle();
+        // $('.fs-slideshow > li').shuffle();
         loadAssets();
         if($('#map').length) { loadMap(); }
     });
@@ -131,8 +133,6 @@
     // window load
     $(window).on('load', function () {
         $('body').addClass('window-loaded');
-
-        $('.gallery section > .item').shuffle();
 
         $('.showcase section').masonry({
             itemSelector: '.item',

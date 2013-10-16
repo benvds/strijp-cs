@@ -1,42 +1,3 @@
-// Gallery
-// (function ($) {
-//     'use strict';
-
-//     var Gallery = function(element) {
-//         this.$element = $(element);
-//         this.$galleryDetails = $('.gallery-details:first');
-//         this.init();
-//     };
-//     Gallery.prototype = {
-//         init: function() {
-//             var that = this,
-//                 $lis = that.$element.find('.gallery-group > li'),
-//                 content;
-
-//             $lis.on('click', function() {
-//                 content = $(this).find('.entry-content');
-
-//                 if (content.length) {
-//                     that.$galleryDetails.empty().append(content.html());
-//                     that.$galleryDetails.addClass('active');
-//                 } else {
-//                     that.$galleryDetails.removeClass('active');
-//                 }
-//             });
-
-//             $lis.has('.entry-content').addClass('clickable');
-//         }
-//     };
-
-//     // document load
-//     $(function() {
-//         $('.gallery').each(function() {
-//             new Gallery(this);
-//         });
-//     });
-
-// })(jQuery);
-
 (function ($) {
 
     function loadAssets() {
@@ -52,19 +13,6 @@
                 $this.append($copy).addClass('asset-loaded');
             }
         });
-    }
-
-    function playSlideshow() {
-        var $slideshow = $('.fs-slideshow:first'),
-            slideshowInterval = 10 * 1000;
-
-        if (!$slideshow.length) { return false; }
-
-        window.setTimeout(function() {
-            window.setInterval(function() {
-                $slideshow.data('fsSlideshow').showNext();
-            }, slideshowInterval);
-        }, slideshowInterval);
     }
 
     function loadMap() {
@@ -125,7 +73,6 @@
     // document load
     $(function () {
         $('.gallery section > .item').shuffle();
-        // $('.fs-slideshow > li').shuffle();
         loadAssets();
         if($('#map').length) { loadMap(); }
     });
@@ -148,7 +95,10 @@
         
         $('.fancybox').fancybox();
 
-        playSlideshow();
+        var $fsSlideshow = $('.fs-slideshow:first').fsSlideshow({
+            shuffle: true,
+            timeout: 8 * 1000
+        });
     });
 
 })(jQuery);

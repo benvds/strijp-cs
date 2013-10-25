@@ -79,7 +79,11 @@
 
     // window load
     $(window).on('load', function () {
-        $('body').addClass('window-loaded');
+        // delay window loaded class, otherwise css transitions won't
+        // be triggered
+        window.setTimeout(function () {
+            $('body').addClass('window-loaded');
+        }, 10);
 
         $('.showcase section').masonry({
             itemSelector: '.item',
